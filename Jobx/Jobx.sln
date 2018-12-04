@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Entidades", "0 - Entidades", "{75680CF2-C7DC-4E89-A256-A42E08CB5B2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Sistema", "1 - Sistema", "{D444DDA4-6194-45CC-90EC-B6280D9A6602}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1 - App", "1.1 - App", "{32028640-A958-4EB2-B27D-3D3CBF18900F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.2 - Serviços", "1.2 - Serviços", "{E933D650-175B-47C2-9EC8-A1EC7643D1C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.3 - Repositório", "1.3 - Repositório", "{A16CDD01-1F2F-42CE-944E-EB3A5BB91EAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobx.Entidades", "Jobx.Entidades\Jobx.Entidades.csproj", "{4A5C0310-1559-4D98-AA7D-A01397D46AEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobx.Repositorio", "Jobx.Repositorio\Jobx.Repositorio.csproj", "{E2346619-D1A9-4F03-8D88-A0562CBFBB93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobx.Servicos", "Jobx.Servicos\Jobx.Servicos.csproj", "{FFDF5FF0-9D5B-413D-8DF7-6268E1B0DC71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobx.App", "Jobx.App\Jobx.App.csproj", "{33AE0052-A9DD-4522-A82C-2047C4008680}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A5C0310-1559-4D98-AA7D-A01397D46AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A5C0310-1559-4D98-AA7D-A01397D46AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A5C0310-1559-4D98-AA7D-A01397D46AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A5C0310-1559-4D98-AA7D-A01397D46AEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2346619-D1A9-4F03-8D88-A0562CBFBB93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2346619-D1A9-4F03-8D88-A0562CBFBB93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2346619-D1A9-4F03-8D88-A0562CBFBB93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2346619-D1A9-4F03-8D88-A0562CBFBB93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFDF5FF0-9D5B-413D-8DF7-6268E1B0DC71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFDF5FF0-9D5B-413D-8DF7-6268E1B0DC71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFDF5FF0-9D5B-413D-8DF7-6268E1B0DC71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFDF5FF0-9D5B-413D-8DF7-6268E1B0DC71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33AE0052-A9DD-4522-A82C-2047C4008680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33AE0052-A9DD-4522-A82C-2047C4008680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33AE0052-A9DD-4522-A82C-2047C4008680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33AE0052-A9DD-4522-A82C-2047C4008680}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{32028640-A958-4EB2-B27D-3D3CBF18900F} = {D444DDA4-6194-45CC-90EC-B6280D9A6602}
+		{E933D650-175B-47C2-9EC8-A1EC7643D1C1} = {D444DDA4-6194-45CC-90EC-B6280D9A6602}
+		{A16CDD01-1F2F-42CE-944E-EB3A5BB91EAE} = {D444DDA4-6194-45CC-90EC-B6280D9A6602}
+		{4A5C0310-1559-4D98-AA7D-A01397D46AEA} = {75680CF2-C7DC-4E89-A256-A42E08CB5B2E}
+		{E2346619-D1A9-4F03-8D88-A0562CBFBB93} = {A16CDD01-1F2F-42CE-944E-EB3A5BB91EAE}
+		{FFDF5FF0-9D5B-413D-8DF7-6268E1B0DC71} = {E933D650-175B-47C2-9EC8-A1EC7643D1C1}
+		{33AE0052-A9DD-4522-A82C-2047C4008680} = {32028640-A958-4EB2-B27D-3D3CBF18900F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85926C12-0EDB-4502-9723-B1D3FB32AA4E}
+	EndGlobalSection
+EndGlobal

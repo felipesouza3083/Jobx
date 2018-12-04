@@ -1,0 +1,6 @@
+C:\Git_Projects\Jobx\Jobx\Jobx.Entidades\bin\Debug\Jobx.Entidades.dll
+C:\Git_Projects\Jobx\Jobx\Jobx.Entidades\bin\Debug\Jobx.Entidades.pdb
+C:\Git_Projects\Jobx\Jobx\Jobx.Entidades\obj\Debug\Jobx.Entidades.csprojAssemblyReference.cache
+C:\Git_Projects\Jobx\Jobx\Jobx.Entidades\obj\Debug\Jobx.Entidades.csproj.CoreCompileInputs.cache
+C:\Git_Projects\Jobx\Jobx\Jobx.Entidades\obj\Debug\Jobx.Entidades.dll
+C:\Git_Projects\Jobx\Jobx\Jobx.Entidades\obj\Debug\Jobx.Entidades.pdb

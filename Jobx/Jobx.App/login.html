@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+
+    <!--Css-->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+    <!--JS-->
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+
+    <script src="App/route.js"></script>
+    <script src="App/login.js"></script>
+
+</head>
+<body class="container" ng-controller="authController">
+    <div class="row" style="margin-top:200px">
+
+        <div class="col-md-4 offset-4">
+
+            <div class="card">
+
+                <div class="card-header">
+                    <h4 class="card-title">Login</h4>
+                </div>
+
+                <div class="card-body">
+                    <span class="card-text">
+                        Para autenticar-se no sistema, informe os dados abaixo:
+                    </span>
+                    <hr />
+
+                    <center><label class="">Email de Acesso:</label></center>
+                    <input type="text" class="form form-control" placeholder="Digite aqui seu Email" ng-model="model.email" />
+
+                    <br />
+                    <center><label>Senha de Acesso:</label></center>
+                    <input type="password" class="form form-control" placeholder="Digite aqui sua senha" ng-model="model.senha" />
+
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-success btn-block" ng-click="autenticar()">
+                        Login
+                    </button>
+                    <br />
+                    <button class="btn btn-info btn-block">
+                        Cadastre-se
+                    </button>
+                    <br />
+                    <span class="text-danger">
+                        {{mensagem}}
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

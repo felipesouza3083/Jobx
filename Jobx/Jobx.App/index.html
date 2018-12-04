@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <title>Index</title>
+
+    <!--Css-->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+    <!--JS-->
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+
+    <script src="App/route.js"></script>
+    <script type="text/javascript">
+        app.controller('homeController',
+            function ($scope, $http, $window) {
+                if (!$window.sessionStorage.token) {
+                    $window.location.href = "/login.html";
+                }
+
+                $http({
+                    method: 'GET',
+                    url: 'http://localhost:50787/jobx/usuario/obterdados',
+                    headers: {
+                        'Authorization': 'Bearer ' + $window.sessionStorage.token
+                    }
+                }).then(function successCallback(msg) {
+                    debugger;
+                    $scope.usuario = msg.data;
+                },
+                    function errorCallback(e) {
+                        $scope.mensagem = e;
+                    });
+
+                $scope.logout = function () {
+                    $window.sessionStorage.clear();
+                    //apagar..
+
+                    $window.location.href = "/login.html";
+                }
+            })
+    </script>
+</head>
+<body class="container" ng-controller="homeController">
+
+    <h4>Bem vindo ao Sistema </h4>
+    de controle de atividades.
+
+    <hr />
+    Id do Usuario: {{usuario.IdUsuario}}
+
+    <br />
+    Nome do Usuario: {{usuario.Nome}}
+
+    <br />
+    Email de Acesso: {{usuario.Email}}
+
+    <br />
+    <br />
+    <button class="btn btn-danger btn-sm" ng-click="logout()">Sair do Sistema</button>
+    <hr />
+    <a href="#">Cadastrar novo funcionário</a>
+    <hr />
+    <div class="row">
+        <div class="col-md-12">
+
+        </div>
+    </div>
+</body>
+</html>
