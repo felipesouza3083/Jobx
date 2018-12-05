@@ -1,0 +1,43 @@
+﻿<h4>Consulta de Funcionário</h4>
+<br />
+
+<div>
+    {{mensagem}}
+</div>
+
+<table class="table table-bordered" ng-init="consultaFuncionario()">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Matricula</th>
+            <th>Telefone</th>
+            <th>Aniversário</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="f in funcionarios">
+            <td>{{f.IdFuncionario}}</td>
+            <td>{{f.Nome}}</td>
+            <td>{{f.Matricula}}</td>
+            <td>{{f.Telefone}}</td>
+            <td>{{f.DataNascimento | date:'dd/MM/yyyy'}}</td>
+
+            <td>
+                <button class="btn btn-info btn-sm" ng-click="atualizarFuncionario(f.IdFuncionario)">
+                    Atualizar
+                </button>
+                
+                <button class="btn btn-danger btn-sm">
+                    Excluir
+                </button>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="6">Quantidade de registros: {{funcionarios.length}}</td>
+        </tr>
+    </tfoot>
+</table>

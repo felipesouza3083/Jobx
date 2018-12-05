@@ -1,6 +1,7 @@
 ﻿using Jobx.Entidades;
 using Jobx.Repositorio.Contracts;
 using Jobx.Servicos.Models.Funcionário;
+using Jobx.Servicos.Utils;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -50,17 +51,8 @@ namespace Jobx.Servicos.Controllers
             }
             else
             {
-                Hashtable erros = new Hashtable();
-
-                foreach (var m in ModelState)
-                {
-                    if (m.Value.Errors.Count > 0)
-                    {
-                        erros[m.Key] = m.Value.Errors.Select(e => e.ErrorMessage);
-                    }
-                }
-
-                return Request.CreateResponse(HttpStatusCode.BadRequest, erros);
+                
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ValidationUtil.GetValidationErrors(ModelState));
             }
         }
 

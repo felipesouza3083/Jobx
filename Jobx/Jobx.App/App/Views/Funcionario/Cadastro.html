@@ -1,0 +1,42 @@
+﻿<h4>Cadastro de Funcionário:</h4>
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <label>Matricula:</label>
+        <input type="text" class="form-control" placeholder="Matricula" ng-model="funcionario.Matricula" />
+        <div class="text-danger" ng-repeat="e in erros['model.Matricula']">
+            <strong>{{e}}</strong>
+        </div>
+
+        <br />
+        <label>Nome do Funcionário:</label>
+        <input type="text" class="form-control" placeholder="Nome do Funcionário" ng-model="funcionario.Nome" />
+        <div class="text-danger" ng-repeat="e in erros['model.Nome']">
+            <strong>{{e}}</strong>
+        </div>
+
+        <br />
+        <label>Telefone:</label>
+        <input type="text" class="form-control" placeholder="Telefone" ng-model="funcionario.Telefone" />
+        <div class="text-danger" ng-repeat="e in erros['model.TeleFone']">
+            <strong>{{e}}</strong>
+        </div>
+
+        <br />
+        <label>Data de Nascimento:</label>
+        <input type="date" class="form-control" placeholder="" ng-model="funcionario.DataNascimento" />
+        <div class="text-danger" ng-repeat="e in erros['model.DataNascimento']">
+            <strong>{{e}}</strong>
+        </div>
+
+        <br />
+        <button class="btn btn-success" ng-click="cadastrarFuncionario()">
+            Cadastrar Funcionário
+        </button>
+        <br />
+
+        <div>
+            {{mensagem}}
+        </div>
+    </div>
+</div>

@@ -350,6 +350,7 @@
     <Compile Include="Providers\ApplicationAuthProvider.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Upload\CustomMultipartFormDataStreamProvider.cs" />
+    <Compile Include="Utils\ValidationUtil.cs" />
     <Compile Include="Validation\CPFValidation.cs" />
     <Compile Include="Validation\TelefoneValidation.cs" />
   </ItemGroup>

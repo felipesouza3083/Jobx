@@ -14,6 +14,9 @@
     <script src="Scripts/angular-route.min.js"></script>
 
     <script src="App/route.js"></script>
+    <script src="App/Controllers/Funcionário/funcionario-cadastro-controller.js"></script>
+    <script src="App/Controllers/Funcionário/funcionario-consulta-controller.js"></script>
+    <script src="App/Controllers/Atividades/atividades-cadastro-controller.js"></script>
     <script type="text/javascript">
         app.controller('homeController',
             function ($scope, $http, $window) {
@@ -28,7 +31,6 @@
                         'Authorization': 'Bearer ' + $window.sessionStorage.token
                     }
                 }).then(function successCallback(msg) {
-                    debugger;
                     $scope.usuario = msg.data;
                 },
                     function errorCallback(e) {
@@ -45,11 +47,40 @@
     </script>
 </head>
 <body class="container" ng-controller="homeController">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
 
-    <h4>Bem vindo ao Sistema </h4>
-    de controle de atividades.
+                <li class="nav-item dropdown">
+                    <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Funcionário
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#funcionario/cadastro">Novo</a>
+                        <a class="dropdown-item" href="#funcionario/consulta">Consulta</a>
+                        <!--<div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>-->
+                    </div>
+                </li>
 
-    <hr />
+                <li class="nav-item dropdown">
+                    <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Atividade
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#atividades/cadastro">Novo</a>
+                        <a class="dropdown-item" href="#">Consulta</a>
+                        <!--<div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>-->
+                    </div>
+                </li>
+
+                <form class="form-inline">
+                    <button class="btn btn-outline-danger my-2 my-sm-0" ng-click="logout()">Logout</button>
+                </form>
+            </ul>
+        </div>
+    </nav>
     Id do Usuario: {{usuario.IdUsuario}}
 
     <br />
@@ -57,16 +88,15 @@
 
     <br />
     Email de Acesso: {{usuario.Email}}
-
-    <br />
-    <br />
-    <button class="btn btn-danger btn-sm" ng-click="logout()">Sair do Sistema</button>
     <hr />
-    <a href="#">Cadastrar novo funcionário</a>
+
+    <h4>Bem vindo ao Sistema </h4>
+    de controle de atividades.
+
     <hr />
     <div class="row">
         <div class="col-md-12">
-
+            <div ng-view></div>
         </div>
     </div>
 </body>
