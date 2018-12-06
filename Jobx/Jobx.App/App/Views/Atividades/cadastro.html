@@ -5,33 +5,35 @@
     <div class="col-md-4">
         <label>Nome da Atividade:</label>
         <input type="text" class="form-control" placeholder="Nome da atividade" />
-        <!--<div class="text-danger" ng-repeat="e in erros['model.Nome']">
+        <div class="text-danger" ng-repeat="e in erros['model.Nome']">
             <strong>{{e}}</strong>
-        </div>-->
+        </div>
 
         <br />
         <label>Data da atividade:</label>
         <input type="datetime" class="form-control" placeholder="" />
-        <!--<div class="text-danger" ng-repeat="e in erros['model.DataAtividade']">
+        <div class="text-danger" ng-repeat="e in erros['model.DataAtividade']">
             <strong>{{e}}</strong>
-        </div>-->
+        </div>
 
 
         <br />
         <label>Funcionário:</label>
-        <select class="form-control" ng-init="consultaFuncionario()">
-            <option value="{{f.IdFuncionario}}">{{f.Nome}}</option>
+        <select class="form-control">
+            <option ng-repeat="f in funcionarios" value="{{f.IdFuncionario}}">{{f.Nome}}</option>
         </select>
+        <div class="text-danger" ng-repeat="e in erros['model.IdFuncionario']">
+            <strong>{{e}}</strong>
+        </div>
 
         <br />
         <button class="btn btn-success">
             Cadastrar Funcionário
-            on
         </button>
         <br />
 
         <div>
-            <!--{{mensagem}}-->
+            {{mensagem}}
         </div>
     </div>
 </div>

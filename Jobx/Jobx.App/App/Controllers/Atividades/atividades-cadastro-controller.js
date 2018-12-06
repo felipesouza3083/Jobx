@@ -1,10 +1,12 @@
 ﻿app.controller(
     'atividades-cadastro-controller',
-    function ($scope, $http, $windows) {
+    function ($scope, $http, $window) {
 
         $scope.atividade = {
             Nome: '', DataAtividade: '', IdFuncionario: 0
         };
+
+        
 
         $scope.consultaFuncionario = function () {
 
@@ -23,6 +25,6 @@
                 $scope.mensagem = e.data;
             });
         };
-
+        $scope.funcionarios = $scope.consultaFuncionario();  
     }
 );
