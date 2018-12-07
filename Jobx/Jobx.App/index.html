@@ -17,6 +17,7 @@
     <script src="App/Controllers/Funcionário/funcionario-cadastro-controller.js"></script>
     <script src="App/Controllers/Funcionário/funcionario-consulta-controller.js"></script>
     <script src="App/Controllers/Atividades/atividades-cadastro-controller.js"></script>
+    <script src="App/Controllers/Atividades/atividades-consulta-controller.js"></script>
     <script type="text/javascript">
         app.controller('homeController',
             function ($scope, $http, $window) {
@@ -58,8 +59,6 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#funcionario/cadastro">Novo</a>
                         <a class="dropdown-item" href="#funcionario/consulta">Consulta</a>
-                        <!--<div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>-->
                     </div>
                 </li>
 
@@ -69,9 +68,9 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#atividades/cadastro">Novo</a>
-                        <a class="dropdown-item" href="#">Consulta</a>
-                        <!--<div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>-->
+                        <a class="dropdown-item" href="#atividades/consulta">Consulta</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Por funcionário</a>-
                     </div>
                 </li>
 

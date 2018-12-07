@@ -70,11 +70,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\Controllers\Atividades\atividades-cadastro-controller.js" />
+    <Content Include="App\Controllers\Atividades\atividades-consulta-controller.js" />
     <Content Include="App\Controllers\Funcionário\funcionario-cadastro-controller.js" />
     <Content Include="App\Controllers\Funcionário\funcionario-consulta-controller.js" />
     <Content Include="App\login.js" />
     <Content Include="App\route.js" />
     <Content Include="App\Views\Atividades\cadastro.html" />
+    <Content Include="App\Views\Atividades\consulta.html" />
     <Content Include="App\Views\Funcionario\Cadastro.html" />
     <Content Include="App\Views\Funcionario\Consulta.html" />
     <Content Include="Content\bootstrap-grid.css" />

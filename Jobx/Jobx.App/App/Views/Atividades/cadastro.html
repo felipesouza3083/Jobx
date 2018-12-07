@@ -4,14 +4,14 @@
 <div class="row">
     <div class="col-md-4">
         <label>Nome da Atividade:</label>
-        <input type="text" class="form-control" placeholder="Nome da atividade" />
+        <input type="text" class="form-control" placeholder="Nome da atividade" ng-model="atividade.Nome"/>
         <div class="text-danger" ng-repeat="e in erros['model.Nome']">
             <strong>{{e}}</strong>
         </div>
 
         <br />
         <label>Data da atividade:</label>
-        <input type="datetime" class="form-control" placeholder="" />
+        <input type="datetime" class="form-control" placeholder="dd/MM/yyyy HH:mm" ng-model="atividade.DataAtividade"/>
         <div class="text-danger" ng-repeat="e in erros['model.DataAtividade']">
             <strong>{{e}}</strong>
         </div>
@@ -19,7 +19,8 @@
 
         <br />
         <label>Funcionário:</label>
-        <select class="form-control">
+        <select class="form-control" ng-model="atividade.IdFuncionario">
+            <option value="0">::SELECIONE::</option>
             <option ng-repeat="f in funcionarios" value="{{f.IdFuncionario}}">{{f.Nome}}</option>
         </select>
         <div class="text-danger" ng-repeat="e in erros['model.IdFuncionario']">
@@ -27,7 +28,7 @@
         </div>
 
         <br />
-        <button class="btn btn-success">
+        <button class="btn btn-success" ng-click="cadastrarAtividade()">
             Cadastrar Funcionário
         </button>
         <br />
