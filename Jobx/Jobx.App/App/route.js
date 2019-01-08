@@ -21,15 +21,15 @@ app.config(
                 '/atividades/cadastro',
                 {
                     templateUrl: '/App/Views/Atividades/cadastro.html',
-                    controller:'atividades-cadastro-controller'
-            }
-        ).when(
-            '/atividades/consulta',
-            {
-                templateUrl: '/App/Views/Atividades/consulta.html',
-                controller: 'atividades-consulta-controller'
-            }
-        );
+                    controller: 'atividades-cadastro-controller'
+                }
+            ).when(
+                '/atividades/consulta',
+                {
+                    templateUrl: '/App/Views/Atividades/consulta.html',
+                    controller: 'atividades-consulta-controller'
+                }
+            );
     }
 );
 

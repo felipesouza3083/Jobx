@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <title>Cadastro de Usuário</title>
+
+    <!--Css-->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+    <!--JS-->
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+
+    <script src="App/route.js"></script>
+    <script src="App/cadastro.js"></script>
+
+</head>
+<body class="container" ng-controller="cadController">
+    <div class="row" style="margin-top:200px">
+
+        <div class="col-md-4 offset-4">
+
+            <div class="card">
+
+                <div class="card-header">
+                    <h4 class="card-title">Cadastro</h4>
+                </div>
+
+                <div class="card-body">
+                    <span class="card-text">
+                        Para cadastrar-se no sistema, informe os dados abaixo:
+                    </span>
+                    <hr />
+
+                    <center><label class="">Nome do Usuário:</label></center>
+                    <input type="text" class="form form-control" placeholder="Digite aqui seu Nome" ng-model="usuario.Nome" />
+                    <div class="text-danger" ng-repeat="e in erros['model.Nome']">
+                        <strong>{{e}}</strong>
+                    </div>
+
+                    <br />
+                    <center><label class="">Foto:</label></center>
+                    <input type="text" class="form form-control" ng-model="usuario.Foto" />
+                    <div class="text-danger" ng-repeat="e in erros['model.Foto']">
+                        <strong>{{e}}</strong>
+                    </div>
+
+                    <br />
+                    <center><label class="">Email de Acesso:</label></center>
+                    <input type="text" class="form form-control" placeholder="Digite aqui seu Email" ng-model="usuario.Email" />
+                    <div class="text-danger" ng-repeat="e in erros['model.Email']">
+                        <strong>{{e}}</strong>
+                    </div>
+
+                    <br />
+                    <center><label>Senha de Acesso:</label></center>
+                    <input type="password" class="form form-control" placeholder="Digite aqui sua senha" ng-model="usuario.Senha" />
+                    <div class="text-danger" ng-repeat="e in erros['model.Senha']">
+                        <strong>{{e}}</strong>
+                    </div>
+
+                    <br />
+                    <center><label>Confirme a Senha de Acesso:</label></center>
+                    <input type="password" class="form form-control" placeholder="Digite aqui sua senha" ng-model="usuario.ConfirmarSenha" />
+                    <div class="text-danger" ng-repeat="e in erros['model.ConfirmarSenha']">
+                        <strong>{{e}}</strong>
+                    </div>
+
+                    <br />
+                    <center><label>Perfil:</label></center>
+                    <select class="form-control" ng-model="usuario.IdPerfil">
+                        <option ng-repeat="p in perfis" value="{{p.IdPerfil}}">{{p.Nome}}</option>
+                    </select>
+                    <div class="text-danger" ng-repeat="e in erros['model.IdPerfil']">
+                        <strong>{{e}}</strong>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-success btn-block" ng-click="cadastrarusuario()">
+                        Cadastrar
+                    </button>
+                    <br />
+                    <button class="btn btn-info btn-block" onclick="location.href = 'login.html'">
+                        Login
+                    </button>
+                    <br />
+                    <span class="text-danger">
+                        {{mensagem}}
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

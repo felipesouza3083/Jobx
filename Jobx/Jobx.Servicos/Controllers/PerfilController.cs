@@ -117,6 +117,7 @@ namespace Jobx.Servicos.Controllers
 
         [HttpGet]
         [Route("listartodosperfis")]
+        [AllowAnonymous]
         public HttpResponseMessage Get()
         {
             try
